@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 
+
 }
 
 body{
@@ -10,5 +11,163 @@ body{
 }
 
 nav{
-    
+    position: fixed; /*Fija el Menú en la esquina superior izq*/
+    top: 20px;
+    left: 20px;
+    display: flex; /*Define que los contenedores son flexibles en linea o en bloque*/
+    justify-content: flex-start;/*coloca todos los contenedores hacia la izq*/
+
+}
+
+nav a{
+    color: #fff;
+    text-decoration: none; /* quita la linea debajo de las palabras*/
+    display: inline-block;
+    animation: moverIzq 1s ease-in
+}
+
+.icono{
+    display: block;
+    z-index: 10000000000; /*fija la palabra Menú y queda por encima de todo, prioriza el numero mas alto*/
+    /*animation:*/
+}
+
+header{
+    /*este gradiente de color se copia de https://uigradients.com/#Radar*/
+    background: #A770EF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #FDB99B, #CF8BF3, #A770EF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #FDB99B, #CF8BF3, #A770EF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    height: auto;
+    padding: 48px;
+    width: 100%;
+
+}
+
+.container{
+    width: 95%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /*igual espacio entre los contenedores*/
+
+}
+
+img{
+    display: block;
+    height: 300px;
+    width: auto;
+    object-fit: cover;/*redimenciona la imagen*/
+    animation: moverArriba 1s ease-in;
+
+}
+
+.textos{
+    width: 50%;
+    color: #fff;
+}
+
+.textos h1{
+    font-size: 80px;
+    animation: moverDer 1s ease-in;
+}
+
+.textos h2{
+    font-size: 30px;
+    animation: moverIzq 1s ease-in
+}
+
+.textos a{
+    display: inline-block;
+    color: #fff;
+    font-weight: 300;
+    margin-top: 30px;
+    text-decoration: none;
+    border: 1px solid #fff;
+    width: 150px;
+    border-radius: 3px;
+    padding: 20px 0;
+    text-align: center;
+    animation: moverArriba 1s ease-in;
+}
+
+.wave{
+    height: 100%;
+    width: 100%;
+    /*este gradiente de color se copia de https://uigradients.com/#Radar*/
+    background: #A770EF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #FDB99B, #CF8BF3, #A770EF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #FDB99B, #CF8BF3, #A770EF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.enlaces{
+    position: fixed;
+    display: flex;
+    top: 0;
+    background: black;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    right: 0;
+    flex-direction: column;
+    width: 100%;
+    /*este gradiente de color se copia de https://uigradients.com/#Radar*/
+    background: #A770EF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #FDB99B, #CF8BF3, #A770EF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #FDB99B, #CF8BF3, #A770EF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-size: 20px;
+    transition: all 1s ease; /*animacion de transicion*/
+}
+
+.uno{
+
+
+}
+
+.dos{
+
+}
+
+@keyframes moverIzq{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moverDer{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moverArriba{
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes moverAbajo{
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
