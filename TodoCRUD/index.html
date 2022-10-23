@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App to do List CRUD</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@400;600&family=Yanone+Kaffeesatz:wght@200;400;600&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="perfil">
+            <div id="fecha"></div>
+            <h1>Bienvenidos a mi Agenda</h1>
+            <span>¡Vamos a Trabajar!</span>
+        </div>
+        <div class="agregarTareas">
+            <input type="text" id="input" placeholder="Agregar Tarea"> <!--Placeholder es para ver un texto que se quita al editar-->
+
+            <i id="botonEnter" 
+                class="fas fa-plus-circle"></i>
+        </div>
+
+        <div class="seccionTareas">
+            <h3> Estas son mis tareas pendientes</h3>
+            <ul id="lista">
+                <li id="elemento">
+                    <i class="far fa-circle co"
+                        data="realizado"
+                        id="0">
+                    </i>
+                    <p class="text">Lavar la Ropa</p>
+                    <i class="fas fa-trash de"
+                    data="eliminado"
+                    id="0">
+                    </i>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+
+
+
+
+    <script src="App.js"></script>
+</body>
+</html>
