@@ -72,14 +72,42 @@ h1{
     cursor: pointer;
 }
 
+/* Seccion Tareas*/
+
+.seccionTareas h3{
+    color: var(--white);
+    margin-bottom: 20px;
+}
 
 
+.seccionTareas li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to bottom, var(--blueDark), var(--green));
+    border-radius: 15px;
+    padding: 10px;
+    color: var(--white);
+    margin: 5px 0px;
+}
+
+.seccionTareas i{
+    font-size: 25px;
+}
+
+.seccionTareas > ul p{ /** coge todo lo que esta dentro, el ul y p**/
+    font-size: 1.2rem;
+}
+
+.seccionTareas i:hover{
+    color: var(--blueLight);
+    cursor: pointer;
+}
 
 
-
-
-
-
-
+.line-Through{
+    text-decoration: line-Through;
+    color: var(--blueLight);
+}
 
 
